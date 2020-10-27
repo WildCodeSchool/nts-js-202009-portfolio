@@ -1,8 +1,28 @@
 import React from 'react';
-import './App.css';
+import Experience from './components/Experience';
 
-function App() {
-  return <div className="App">Hello World!</div>;
+const tabExperiences = [
+  {
+    year: "2016-2018",
+    company: "Agricool",
+    tasks: "Chief Operator"
+  },
+  {
+    year: "2018-2019",
+    company: "Ferme de la Chebuette",
+    tasks: "Chief Operator"
+  }
+]
+
+const App = () => {
+  return (
+    <div>
+      {tabExperiences.map((experience) => 
+      <Experience experience={experience} 
+      />)}
+    </div>
+  );       
+        
 }
 
 export default App;
